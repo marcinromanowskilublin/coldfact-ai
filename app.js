@@ -196,7 +196,7 @@ async function runMockPipeline() {
   const stages = [
     { key: "intake", label: "Locking fictional speech sample", width: 28 },
     { key: "scores", label: "Reading FACT / FORCE / FOG on the sample", width: 64 },
-    { key: "report", label: "Composing the share card", width: 100 },
+    { key: "report", label: "Locking the acoustic readout", width: 100 },
   ];
 
   runMockButton.disabled = true;
