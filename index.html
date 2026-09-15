@@ -5,191 +5,219 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="ColdFact.ai is for sale. Domain, FACT / FORCE / FOG speech-sample prototype, and a curated asset package. Asking $35,000."
+      content="ColdFact reads a 60-second speech sample and hands back three blunt signals — FACT, FORCE, FOG — as one receipt you can screenshot. Not a lie detector. Not a verdict on the speaker."
     />
-    <meta name="theme-color" content="#090a0d" />
-    <meta property="og:title" content="ColdFact.ai — for sale" />
+    <meta name="theme-color" content="#0b0c10" />
+    <meta property="og:title" content="ColdFact.ai — Speech has a tell. We read it." />
     <meta
       property="og:description"
-      content="Pre-revenue asset package: coldfact.ai, brand, sales demo, and an unvalidated speech-sample prototype. Asking $35,000."
+      content="Sixty seconds of speech in. Three blunt signals out: FACT, FORCE, FOG. One receipt you can screenshot. Early access opening soon."
     />
     <meta property="og:type" content="website" />
-    <title>ColdFact.ai — For Sale · $35,000</title>
+    <title>ColdFact.ai — Speech has a tell. We read it.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="site-noise" aria-hidden="true"></div>
-    <header class="site-header shell">
-      <a class="wordmark" href="#top" aria-label="ColdFact for sale">
-        <span>COLD</span><span>FACT</span><i>.ai</i>
-      </a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="#offer">Offer</a>
+
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="wordmark" href="#top" aria-label="ColdFact home">
+          <span class="wordmark-dot" aria-hidden="true"></span>
+          <span>Cold<b>Fact</b></span><i>.ai</i>
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#product">Product</a>
+          <a href="#how">How it works</a>
+          <a href="#demo">Demo</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a class="button button-primary button-small" href="#early-access">Get early access</a>
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobileNav">
+          <span></span><span></span><span></span>
+          <span class="sr-only">Menu</span>
+        </button>
+      </div>
+      <div class="mobile-nav" id="mobileNav" hidden>
+        <a href="#product">Product</a>
+        <a href="#how">How it works</a>
         <a href="#demo">Demo</a>
-        <a href="#visuals">Frames</a>
-        <a href="#process">Process</a>
-      </nav>
-      <a class="header-contact" href="#offer">Asking $35,000</a>
+        <a href="#faq">FAQ</a>
+        <a href="#early-access">Get early access</a>
+      </div>
     </header>
 
     <main id="top">
-      <section class="hero shell">
-        <div class="hero-copy">
-          <p class="eyebrow"><span></span> FOR SALE · PRIVATE ASSET PACKAGE</p>
-          <h1>
-            60 seconds of speech.
-            <em>FACT / FORCE / FOG.</em>
-            A card you can share.
-          </h1>
-          <p class="hero-lede">
-            ColdFact.ai is a pre-revenue acquisition package: the domain, the product language,
-            a static sales demo, and a cleaned FastAPI prototype. It reads a speech sample — not
-            a person. Not a lie detector. Not a live SaaS.
-          </p>
-          <div class="ask-row" id="offer">
-            <div class="ask-price">
-              <span>Asking price</span>
-              <strong>$35,000</strong>
+      <section class="hero">
+        <div class="shell hero-inner">
+          <div class="hero-copy" data-reveal>
+            <p class="eyebrow"><span></span> EARLY ACCESS · BUILT TO CALL OUT FOG</p>
+            <h1>
+              Speech has a tell.
+              <em>We read it.</em>
+            </h1>
+            <p class="hero-lede">
+              Sixty seconds of speech in. Three blunt signals out — <b>FACT</b>, <b>FORCE</b>,
+              <b>FOG</b> — printed on one receipt built to screenshot and send. Not a lie
+              detector. A mirror for one sample.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#demo">
+                Run a sample
+                <span aria-hidden="true">↓</span>
+              </a>
+              <a class="button button-quiet" href="#early-access">
+                Get early access
+                <span aria-hidden="true">→</span>
+              </a>
             </div>
-            <p class="ask-note">
-              Domain + brand + demo + prototype. Serious buyers: NDA, then data room.
-              Negotiation is expected. Do not treat this as revenue, customers, or a finished
-              product.
+            <p class="hero-footnote">
+              Not a lie detector. Not a diagnosis. Not a verdict on the speaker — just what's
+              in the sample.
             </p>
           </div>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#demo">
-              Run the FACT / FORCE / FOG demo
-              <span aria-hidden="true">↓</span>
-            </a>
-            <a class="button button-quiet" href="#process">
-              Handover path
-              <span aria-hidden="true">→</span>
-            </a>
-          </div>
-          <p class="hero-footnote">
-            Public teaser only. Source review after NDA. Contact is not published on this page.
-          </p>
-        </div>
 
-        <div class="hero-console" aria-label="ColdFact score map">
-          <div class="console-top">
-            <span class="status-dot"></span>
-            <span>SPEECH SAMPLE · NOT PERSON</span>
-            <span class="console-id">CF / LIVE MOCK</span>
-          </div>
-          <div class="console-grid">
-            <article class="console-module input-module">
-              <span class="module-label">01 / INPUT</span>
+          <div class="hero-visual" data-reveal>
+            <span class="stamp-badge">NOT&nbsp;A&nbsp;LIE&nbsp;DETECTOR</span>
+            <div class="receipt-card" aria-label="Sample readout preview">
+              <div class="receipt-head">
+                <span>COLDFACT RECEIPT</span>
+                <span>#0071</span>
+              </div>
+              <p class="receipt-kicker">SAMPLE OVERHEARD</p>
+              <p class="receipt-quote">
+                “The delivery team needs the decision owner, open questions, and next milestone
+                captured before Friday.”
+              </p>
+              <div class="receipt-rule"></div>
+              <div class="hero-meters">
+                <div class="hero-meter fact">
+                  <span>FACT</span><i style="--v: 64%"><b></b></i><em>64</em>
+                </div>
+                <div class="hero-meter force">
+                  <span>FORCE</span><i style="--v: 81%"><b></b></i><em>81</em>
+                </div>
+                <div class="hero-meter fog">
+                  <span>FOG</span><i style="--v: 47%"><b></b></i><em>47</em>
+                </div>
+              </div>
+              <div class="receipt-rule"></div>
+              <p class="receipt-verdict">MORE PRESSURE THAN SUBSTANCE</p>
               <div class="mini-wave" aria-hidden="true">
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
               </div>
-              <strong>60-second sample</strong>
-              <small>fictional text in this demo · no mic · no upload</small>
-            </article>
-            <article class="console-module pipeline-module">
-              <span class="module-label">02 / SCORES</span>
-              <ul>
-                <li><b>FACT</b><span>concrete detail density</span></li>
-                <li><b>FORCE</b><span>rhetorical pressure</span></li>
-                <li><b>FOG</b><span>vagueness and blur</span></li>
-              </ul>
-            </article>
-            <article class="console-module output-module">
-              <span class="module-label">03 / OUTPUT</span>
-              <div class="output-bars" aria-hidden="true">
-                <span style="--level: 64%"></span>
-                <span style="--level: 81%"></span>
-                <span style="--level: 47%"></span>
-              </div>
-              <strong>Shareable result card</strong>
-              <small>signals in the sample · not a verdict on the speaker</small>
-            </article>
-          </div>
-          <div class="console-bottom">
-            <span>UNVALIDATED PROTOTYPE</span>
-            <span>STATIC DEMO — NO AUDIO CAPTURED</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="signal-strip">
-        <div class="shell signal-inner">
-          <p>What this listing includes</p>
-          <div class="signal-points">
-            <span><b>01</b> coldfact.ai</span>
-            <span><b>02</b> FACT / FORCE / FOG language</span>
-            <span><b>03</b> Sales demo + prototype</span>
-            <span><b>04</b> Transfer docs</span>
+      <section class="trust-strip">
+        <div class="shell trust-inner">
+          <p>Already sick of reading between the lines</p>
+          <div class="trust-tags">
+            <span>Coaches</span>
+            <span>Journalists</span>
+            <span>Hiring teams</span>
+            <span>Creators</span>
+            <span>Review boards</span>
           </div>
         </div>
       </section>
 
-      <section id="portfolio" class="portfolio shell section">
-        <div class="section-heading">
-          <p class="eyebrow"><span></span> THIS FOLDER ONLY</p>
-          <h2>One package. <em>No extra products invented.</em></h2>
-          <p>
-            The public offer is the curated Desktop pack. Side prototypes that are not in this
-            folder are not part of the asking price.
-          </p>
-        </div>
-
-        <div class="asset-tabs" role="tablist" aria-label="Asset portfolio">
-          <button class="asset-tab is-active" type="button" data-asset="domain" role="tab" aria-selected="true">
-            Domain &amp; brand
-          </button>
-          <button class="asset-tab" type="button" data-asset="demo" role="tab" aria-selected="false">
-            Sales demo
-          </button>
-          <button class="asset-tab" type="button" data-asset="core" role="tab" aria-selected="false">
-            Prototype
-          </button>
-        </div>
-
-        <article class="asset-panel" id="assetPanel" aria-live="polite">
-          <div class="asset-index">01</div>
-          <div class="asset-content">
-            <p class="asset-kicker">TRANSFERABLE NAME</p>
-            <h3>coldfact.ai + product language</h3>
-            <p>
-              Short .ai domain and a locked public promise: sixty seconds of speech, three
-              scores, one shareable card. Speech sample, not person.
-            </p>
-            <ul class="asset-list">
-              <li>Registrar transfer of coldfact.ai after escrow</li>
-              <li>FACT / FORCE / FOG naming and claim boundary</li>
-              <li>Brand frames for intake, scores, and report</li>
-            </ul>
-          </div>
-          <div class="asset-meta">
-            <span>BEST FOR</span>
-            <strong>Speech analytics, coaching, media, creator tools</strong>
-            <span>STATUS</span>
-            <strong>Domain live at registrar · listing not yet public HTTPS</strong>
-          </div>
-        </article>
-      </section>
-
-      <section id="demo" class="demo-compose">
+      <section id="product" class="section bento-section">
         <div class="shell">
-          <div class="section-heading vision-heading demo-heading">
-            <p class="eyebrow"><span></span> COMPOSED PRODUCT DEMO</p>
-            <h2>Sample → FACT / FORCE / FOG. <em>No price on the card.</em></h2>
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow"><span></span> THREE SIGNALS, ZERO SPIN</p>
+            <h2>One sample. <em>No spin allowed.</em></h2>
             <p>
-              Fictional speech only. The three concept frames advance with the pipeline. No mic,
-              no upload, no APIs, no diagnosis.
+              ColdFact doesn't tell you if someone's lying. It tells you what's real, what's
+              pushy, and what quietly got dodged — in the sixty seconds you gave it.
             </p>
+          </div>
+
+          <div class="bento-grid">
+            <article class="bento-card bento-fact" data-reveal>
+              <span class="bento-tag">01 / FACT</span>
+              <h3>The receipts</h3>
+              <p>Concrete detail density — names, numbers, dates, owners. Stuff you can check.</p>
+            </article>
+            <article class="bento-card bento-force" data-reveal>
+              <span class="bento-tag">02 / FORCE</span>
+              <h3>The push</h3>
+              <p>Rhetorical pressure — urgency and certainty doing the persuading instead of the telling.</p>
+            </article>
+            <article class="bento-card bento-fog" data-reveal>
+              <span class="bento-tag">03 / FOG</span>
+              <h3>The dodge</h3>
+              <p>Vagueness and blur — the nouns and claims that quietly disappear mid-sentence.</p>
+            </article>
+            <article class="bento-card bento-wide" data-reveal>
+              <h3>A card built to flex</h3>
+              <p>
+                Every run ends in one blunt receipt — three scores, zero jargon, built to
+                screenshot and send without a caption.
+              </p>
+            </article>
+            <article class="bento-card bento-dark" data-reveal>
+              <h3>Sample, not person</h3>
+              <p>The scores read sixty seconds of speech. Not a verdict on who said it — save the pitchforks.</p>
+            </article>
+            <article class="bento-card bento-dark" data-reveal>
+              <h3>No mic, no upload</h3>
+              <p>This preview runs on fictional text. Nothing you type here goes anywhere. Promise.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" class="how-section">
+        <div class="shell">
+          <div class="section-heading compact" data-reveal>
+            <p class="eyebrow"><span></span> HOW IT WORKS</p>
+            <h2>From speech to receipt <em>in three steps.</em></h2>
+          </div>
+          <ol class="how-list">
+            <li data-reveal>
+              <span>01</span>
+              <div>
+                <h3>Drop a sample</h3>
+                <p>Up to sixty seconds. A call, a statement, a pitch, an excuse.</p>
+              </div>
+            </li>
+            <li data-reveal>
+              <span>02</span>
+              <div>
+                <h3>ColdFact reads it</h3>
+                <p>FACT, FORCE, and FOG scored straight off the sample.</p>
+              </div>
+            </li>
+            <li data-reveal>
+              <span>03</span>
+              <div>
+                <h3>Get the receipt</h3>
+                <p>One blunt card. Share it — don't explain it.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="demo" class="demo-section">
+        <div class="shell">
+          <div class="section-heading demo-heading" data-reveal>
+            <p class="eyebrow"><span></span> TRY IT NOW</p>
+            <h2>Run a sample. <em>Watch the fog burn off.</em></h2>
+            <p>Pick a fictional sample and run it through the same pipeline. No sign-up, no mic.</p>
           </div>
 
           <div class="demo-board">
-            <aside class="demo-controls">
+            <aside class="demo-controls" data-reveal>
               <label for="mockScenario">Sample</label>
               <select id="mockScenario">
                 <option value="handoff">Handoff speech</option>
@@ -210,44 +238,14 @@
               </ol>
             </aside>
 
-            <div class="demo-phones" aria-label="Concept screen stages">
-              <figure class="demo-phone is-active" data-stage="intake">
-                <img
-                  src="./images/coldfact-intake-full.png"
-                  alt="ColdFact intake concept"
-                  width="529"
-                  height="1024"
-                />
-                <figcaption>01 / INTAKE</figcaption>
-              </figure>
-              <figure class="demo-phone" data-stage="scores">
-                <img
-                  src="./images/coldfact-scores-full.png"
-                  alt="ColdFact scores concept"
-                  width="288"
-                  height="1024"
-                />
-                <figcaption>02 / FACT FORCE FOG</figcaption>
-              </figure>
-              <figure class="demo-phone" data-stage="report">
-                <img
-                  src="./images/coldfact-report-scope.png?v=3"
-                  alt="ColdFact acoustic readout: oscilloscope and FACT FORCE FOG meters"
-                  width="720"
-                  height="1280"
-                />
-                <figcaption>03 / SCOPE</figcaption>
-              </figure>
-            </div>
-
-            <div class="demo-rail" aria-label="Simulation console">
+            <div class="demo-rail" data-reveal aria-label="Simulation console">
               <div class="demo-rail-bar">
-                <span>CF / SAMPLE MOCK</span>
+                <span>CF / SAMPLE PREVIEW</span>
                 <span id="mockState">STANDBY</span>
               </div>
               <div class="mock-log" id="mockLog" aria-live="polite">
                 <p><span>00</span> Ready. Pick a sample and run.</p>
-                <p><span>—</span> Concept UI only — not product output.</p>
+                <p><span>—</span> Preview only — not product output.</p>
               </div>
               <div class="demo-meters" id="demoMeters" hidden>
                 <div><span>FACT</span><i style="--v:64%"><b></b></i><em>64</em></div>
@@ -263,172 +261,84 @@
               </div>
               <div class="mock-progress"><span id="mockProgress"></span></div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <section id="visuals" class="vision-section">
-        <div class="shell">
-          <div class="section-heading vision-heading">
-            <p class="eyebrow"><span></span> PRODUCT FRAMES</p>
-            <h2>Intake. Scores. Card. <em>Directional only.</em></h2>
-            <p>
-              Concept screens for the public promise. Not validated analysis and not a claim
-              about a speaker.
-            </p>
-          </div>
-
-          <div class="vision-grid">
-            <figure class="vision-card vision-screen">
-              <div class="vision-window vision-photo vision-photo-truth">
-                <img
-                  src="./images/coldfact-intake-full.png"
-                  alt="ColdFact intake concept screen."
-                  loading="lazy"
-                />
-                <span class="vision-photo-label">01 / INTAKE</span>
-                <span class="vision-photo-note">CONCEPT</span>
-              </div>
-              <figcaption>
-                <span>01 / Speech sample</span>
-                <p>Sixty seconds in. No biography of the speaker.</p>
-              </figcaption>
-            </figure>
-
-            <figure class="vision-card vision-screen">
-              <div class="vision-window vision-photo vision-photo-scores">
-                <img
-                  src="./images/coldfact-scores-full.png"
-                  alt="ColdFact FACT FORCE FOG concept."
-                  loading="lazy"
-                />
-                <span class="vision-photo-label">02 / SCORES</span>
-                <span class="vision-photo-note">CONCEPT</span>
-              </div>
-              <figcaption>
-                <span>02 / FACT · FORCE · FOG</span>
-                <p>Three scores on the sample. No price on this card.</p>
-              </figcaption>
-            </figure>
-
-            <figure class="vision-card vision-screen">
-              <div class="vision-window vision-photo vision-photo-tactical">
+            <div class="demo-phones" aria-label="Concept screen stages">
+              <figure class="demo-phone is-active" data-stage="intake">
+                <img src="./images/coldfact-intake-full.png" alt="ColdFact intake concept" width="529" height="1024" />
+                <figcaption>01 / INTAKE</figcaption>
+              </figure>
+              <figure class="demo-phone" data-stage="scores">
+                <img src="./images/coldfact-scores-full.png" alt="ColdFact scores concept" width="288" height="1024" />
+                <figcaption>02 / SCORES</figcaption>
+              </figure>
+              <figure class="demo-phone" data-stage="report">
                 <img
                   src="./images/coldfact-report-scope.png?v=3"
-                  alt="ColdFact acoustic readout: oscilloscope and FACT FORCE FOG meters."
-                  loading="lazy"
+                  alt="ColdFact acoustic readout: oscilloscope and FACT FORCE FOG meters"
+                  width="720"
+                  height="1280"
                 />
-                <span class="vision-photo-label">03 / SCOPE</span>
-                <span class="vision-photo-note">CONCEPT</span>
-              </div>
-              <figcaption>
-                <span>03 / Acoustic card</span>
-                <p>Oscilloscope and meters. Speech signal, not a face.</p>
-              </figcaption>
-            </figure>
+                <figcaption>03 / CARD</figcaption>
+              </figure>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="acquisition shell section">
-        <div class="section-heading compact">
-          <p class="eyebrow"><span></span> ACQUISITION SCOPE</p>
-          <h2>Built for a buyer who wants <em>a named starting point.</em></h2>
-        </div>
-        <div class="scope-grid">
-          <article>
-            <span class="scope-number">A</span>
-            <h3>In the $35,000 discussion</h3>
-            <ul>
-              <li>coldfact.ai domain transfer</li>
-              <li>Brand and FACT / FORCE / FOG language</li>
-              <li>This static sales demo</li>
-              <li>Cleaned FastAPI + SPA prototype (keys stripped)</li>
-              <li>Buyer brief, manifest, NDA template</li>
-            </ul>
-          </article>
-          <article>
-            <span class="scope-number">B</span>
-            <h3>Buyer still has to do</h3>
-            <ul>
-              <li>API accounts, spend, and provider terms</li>
-              <li>Tests, auth, consent, retention</li>
-              <li>Public HTTPS, demo video, production hardening</li>
-              <li>Trademark and claims review in the target market</li>
-            </ul>
-          </article>
-          <article>
-            <span class="scope-number">C</span>
-            <h3>Not represented</h3>
-            <ul>
-              <li>Revenue, customers, or MRR</li>
-              <li>Clinical validation or psychological diagnosis</li>
-              <li>Lie detection or factual verdicts</li>
-              <li>FlowWatch / VoiceGraph (not in this pack)</li>
-              <li>User recordings or personal datasets</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="process" class="process-section">
+      <section id="faq" class="faq-section">
         <div class="shell">
-          <div class="section-heading compact process-heading">
-            <p class="eyebrow"><span></span> HANDOVER</p>
-            <h2>Inquiry → NDA → escrow. <em>Then the domain moves.</em></h2>
+          <div class="section-heading compact" data-reveal>
+            <p class="eyebrow"><span></span> BOUNDARIES (READ THESE)</p>
+            <h2>What ColdFact is <em>— and isn't.</em></h2>
           </div>
-          <ol class="process-list">
-            <li>
-              <span>01</span>
-              <div>
-                <h3>Inquiry</h3>
-                <p>Short note: who you are, what you would build, and that you accept a private asset sale.</p>
-              </div>
-            </li>
-            <li>
-              <span>02</span>
-              <div>
-                <h3>NDA</h3>
-                <p>Then the acquisition brief, asset manifest, and prototype walkthrough.</p>
-              </div>
-            </li>
-            <li>
-              <span>03</span>
-              <div>
-                <h3>Diligence</h3>
-                <p>Source, claim boundary, and transfer path. No user data is included.</p>
-              </div>
-            </li>
-            <li>
-              <span>04</span>
-              <div>
-                <h3>Escrow &amp; transfer</h3>
-                <p>Funds clear, then domain push and delivery of the agreed pack.</p>
-              </div>
-            </li>
-          </ol>
+          <div class="faq-list">
+            <details data-reveal open>
+              <summary>Is this a lie detector?</summary>
+              <p>No. It's not judge, jury, or polygraph. It scores concreteness, pressure, and vagueness — nothing else.</p>
+            </details>
+            <details data-reveal>
+              <summary>Does it analyze the person, or the sample?</summary>
+              <p>Only the sample. The same speaker can score differently on a different day, a different topic, or a different sixty seconds.</p>
+            </details>
+            <details data-reveal>
+              <summary>Is my audio uploaded anywhere?</summary>
+              <p>Not in this preview. The demo above runs on fictional text — no microphone, no upload, nothing stored.</p>
+            </details>
+            <details data-reveal>
+              <summary>Who is this actually for?</summary>
+              <p>People who read speech for a living and are tired of guessing: coaches, journalists, hiring teams, creators.</p>
+            </details>
+          </div>
         </div>
       </section>
 
-      <section class="closing shell">
-        <p class="eyebrow"><span></span> COLDFACT.AI IS FOR SALE</p>
-        <h2>Asking $35,000.<br /><em>Asset package. Not a company.</em></h2>
-        <div class="closing-actions">
-          <a class="button button-primary" href="#offer">
-            See the ask <span aria-hidden="true">↑</span>
-          </a>
-          <button id="copyContact" class="button button-quiet" type="button" data-email="">
-            Contact is not public <span aria-hidden="true">—</span>
-          </button>
+      <section id="early-access" class="early-access">
+        <div class="shell early-inner">
+          <div class="section-heading compact" data-reveal>
+            <p class="eyebrow"><span></span> COLDFACT.AI</p>
+            <h2>Early access is <em>opening soon.</em></h2>
+            <p>Leave your email. One note when the fog-cutting starts. No spam, no drip campaign.</p>
+          </div>
+          <form class="early-form" id="earlyForm" data-reveal>
+            <label class="sr-only" for="earlyEmail">Email address</label>
+            <input id="earlyEmail" type="email" placeholder="you@company.com" required autocomplete="email" />
+            <button class="button button-primary" type="submit">
+              Notify me <span aria-hidden="true">→</span>
+            </button>
+          </form>
+          <p class="early-status" id="earlyStatus" aria-live="polite"></p>
         </div>
-        <p class="copy-status" id="copyStatus" aria-live="polite"></p>
       </section>
     </main>
 
-    <footer class="site-footer shell">
-      <a class="wordmark footer-mark" href="#top"><span>COLD</span><span>FACT</span><i>.ai</i></a>
-      <p>Private asset sale. Pre-revenue prototype. Speech sample, not person.</p>
-      <span>© <span id="year"></span> ColdFact.ai</span>
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <a class="wordmark footer-mark" href="#top">
+          <span>Cold<b>Fact</b></span><i>.ai</i>
+        </a>
+        <p>Read the sample. Not the person. Not a verdict.</p>
+        <span>© <span id="year"></span> ColdFact.ai</span>
+      </div>
     </footer>
 
     <script src="./app.js" defer></script>
