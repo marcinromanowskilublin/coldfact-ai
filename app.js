@@ -1,48 +1,3 @@
-const portfolio = {
-  domain: {
-    index: "01",
-    kicker: "TRANSFERABLE NAME",
-    title: "coldfact.ai + product language",
-    description:
-      "Short .ai domain and a locked public promise: sixty seconds of speech, three scores, one shareable card. Speech sample, not person.",
-    bullets: [
-      "Registrar transfer of coldfact.ai after escrow",
-      "FACT / FORCE / FOG naming and claim boundary",
-      "Brand frames for intake, scores, and report",
-    ],
-    bestFor: "Speech analytics, coaching, media, creator tools",
-    status: "Domain live at registrar · listing not yet public HTTPS",
-  },
-  demo: {
-    index: "02",
-    kicker: "PUBLIC TEASER",
-    title: "Static sales demo",
-    description:
-      "This page: for-sale framing, asking price, and a composed FACT / FORCE / FOG walkthrough. No microphone, no upload, no APIs.",
-    bullets: [
-      "Static HTML / CSS / JS ready for ordinary hosting",
-      "Concept screens: intake, scores, card",
-      "Claim boundary written into the page",
-    ],
-    bestFor: "Showing a buyer the product in under a minute",
-    status: "Local / FTP-ready · contact withheld until you publish it",
-  },
-  core: {
-    index: "03",
-    kicker: "PRIMARY PROTOTYPE",
-    title: "FastAPI speech-sample prototype",
-    description:
-      "Cleaned source for audio intake, preview, optional provider hooks, and a result card. Keys stripped. Unvalidated. Not sold as a finished SaaS.",
-    bullets: [
-      "FastAPI + SPA, Docker and deploy notes",
-      "Public copy aligned to FACT / FORCE / FOG",
-      "Checkout scaffold exists — not required to buy the package",
-    ],
-    bestFor: "A product team that will finish the engine",
-    status: "Keys stripped · no user recordings · no production warranty",
-  },
-};
-
 const mockScenarios = {
   handoff: {
     input:
@@ -91,8 +46,6 @@ const mockScenarios = {
   },
 };
 
-const assetPanel = document.getElementById("assetPanel");
-const assetTabs = [...document.querySelectorAll(".asset-tab")];
 const scenarioSelect = document.getElementById("mockScenario");
 const runMockButton = document.getElementById("runMock");
 const mockTranscript = document.getElementById("mockTranscript");
@@ -105,43 +58,6 @@ const mockProgress = document.getElementById("mockProgress");
 const demoMeters = document.getElementById("demoMeters");
 const demoPhones = [...document.querySelectorAll(".demo-phone")];
 const demoSteps = [...document.querySelectorAll("#demoSteps li")];
-const copyContactButton = document.getElementById("copyContact");
-const copyStatus = document.getElementById("copyStatus");
-
-function renderAsset(assetKey) {
-  const item = portfolio[assetKey];
-  if (!item || !assetPanel) return;
-
-  assetPanel.innerHTML = `
-    <div class="asset-index">${item.index}</div>
-    <div class="asset-content">
-      <p class="asset-kicker">${item.kicker}</p>
-      <h3>${item.title}</h3>
-      <p>${item.description}</p>
-      <ul class="asset-list">
-        ${item.bullets.map((bullet) => `<li>${bullet}</li>`).join("")}
-      </ul>
-    </div>
-    <div class="asset-meta">
-      <span>BEST FOR</span>
-      <strong>${item.bestFor}</strong>
-      <span>STATUS</span>
-      <strong>${item.status}</strong>
-    </div>
-  `;
-}
-
-assetTabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    const assetKey = tab.dataset.asset;
-    assetTabs.forEach((button) => {
-      const isCurrent = button === tab;
-      button.classList.toggle("is-active", isCurrent);
-      button.setAttribute("aria-selected", String(isCurrent));
-    });
-    renderAsset(assetKey);
-  });
-});
 
 function setStage(stageName) {
   demoPhones.forEach((phone) => {
@@ -178,12 +94,12 @@ function setScenario() {
   setStage("intake");
   mockLog.innerHTML = `
     <p><span>00</span> Sample loaded: ${scenarioSelect.options[scenarioSelect.selectedIndex].text}.</p>
-    <p><span>—</span> Concept UI only — scores describe the sample, not a person.</p>
+    <p><span>—</span> Preview only — scores describe the sample, not a person.</p>
   `;
   mockProgress.style.width = "0%";
 }
 
-scenarioSelect.addEventListener("change", setScenario);
+if (scenarioSelect) scenarioSelect.addEventListener("change", setScenario);
 
 function wait(milliseconds) {
   return new Promise((resolve) => window.setTimeout(resolve, milliseconds));
@@ -196,7 +112,7 @@ async function runMockPipeline() {
   const stages = [
     { key: "intake", label: "Locking fictional speech sample", width: 28 },
     { key: "scores", label: "Reading FACT / FORCE / FOG on the sample", width: 64 },
-    { key: "report", label: "Locking the acoustic readout", width: 100 },
+    { key: "report", label: "Printing the receipt", width: 100 },
   ];
 
   runMockButton.disabled = true;
@@ -230,28 +146,72 @@ async function runMockPipeline() {
   runMockButton.innerHTML = 'Run demo <span aria-hidden="true">→</span>';
 }
 
-runMockButton.addEventListener("click", runMockPipeline);
+if (runMockButton) runMockButton.addEventListener("click", runMockPipeline);
 
-function copyContact() {
-  const email = (copyContactButton.dataset.email || "").trim();
-  if (!email || email === "CONTACT_EMAIL_HERE") {
-    copyStatus.textContent = "Contact is not published on this page. Fill it in before you go live.";
-  } else {
-    navigator.clipboard.writeText(email).then(
-      () => {
-        copyStatus.textContent = "Contact e-mail copied.";
-      },
-      () => {
-        copyStatus.textContent = `Contact: ${email}`;
-      },
-    );
-  }
+// mobile nav
 
-  window.setTimeout(() => {
-    copyStatus.textContent = "";
-  }, 4200);
+const navToggle = document.getElementById("navToggle");
+const mobileNav = document.getElementById("mobileNav");
+
+if (navToggle && mobileNav) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = mobileNav.classList.toggle("is-open");
+    mobileNav.hidden = !isOpen;
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  mobileNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileNav.classList.remove("is-open");
+      mobileNav.hidden = true;
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
 }
 
-copyContactButton.addEventListener("click", copyContact);
+// early access form
+
+const earlyForm = document.getElementById("earlyForm");
+const earlyStatus = document.getElementById("earlyStatus");
+
+if (earlyForm && earlyStatus) {
+  earlyForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const email = document.getElementById("earlyEmail").value.trim();
+    if (!email) return;
+
+    const subject = encodeURIComponent("ColdFact early access");
+    const body = encodeURIComponent(`Add me to the ColdFact early access list: ${email}`);
+    window.location.href = `mailto:hello@coldfact.ai?subject=${subject}&body=${body}`;
+
+    earlyStatus.textContent = "Opening your mail app — send it to lock in your spot.";
+    earlyForm.reset();
+    window.setTimeout(() => {
+      earlyStatus.textContent = "";
+    }, 5200);
+  });
+}
+
+// scroll reveal
+
+const revealTargets = [...document.querySelectorAll("[data-reveal]")];
+
+if (revealTargets.length && "IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15, rootMargin: "0px 0px -40px 0px" },
+  );
+  revealTargets.forEach((target) => observer.observe(target));
+} else {
+  revealTargets.forEach((target) => target.classList.add("is-visible"));
+}
+
 document.getElementById("year").textContent = String(new Date().getFullYear());
 setStage("intake");
